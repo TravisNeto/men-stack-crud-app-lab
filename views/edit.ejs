@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit <%=dog.name%></title>
+</head>
+<body>
+  <h1>Edit <%= dog.name %></h1>
+  <form action="/dogs/<%=dog._id%>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%= dog.name %>" />
+    <label for="ready-to-walk">Ready to Walk?</label>
+    <input
+      type="checkbox"
+      name="isReadyToWalk"
+      <% if (dog.isReadyToWalk) { %>checked<% } %> 
+      />
+    <button type="submit">Update Dog</button>
+  </form>
+  <a href="/dogs">Back to Dogs</a>
+</body>
+</html>
+  

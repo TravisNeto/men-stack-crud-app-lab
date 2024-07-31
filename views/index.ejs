@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dogs Index</title>
+</head>
+<body>
+  <a href="/dogs/new">Add Dogs</a>
+  <h1>Walk All of the Dogs!
+    <% dogs.forEach((dog) => { %>
+      <li>
+        <a href="/dogs/<%=dog._id%>">
+          <%= dog.name %>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

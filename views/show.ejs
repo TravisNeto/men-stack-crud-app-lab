@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= dog.name %></title>
+</head>
+<body>
+  <h1><%= dog.name %></h1>
+  <% if(dog.isReadyToWalk){ %>
+    <p>You have walked this dog, Great Job!</p>
+  <% } else { %>
+    <p>You have not walked this dog, grab the leash!</p>
+  <% } %>
+  <form action="/dogs/<%=dog._id%>?_method=DELETE" method="POST">
+    <button type="submit">
+      Delete <%= dog._name %>
+    </button>
+  </form>
+  <a href="/dogs/<%= dog._id %>/edit">Edit <%= dog.name %></a>
+  <a href="/dogs">Back to Dogs</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post a Dog</title>
+</head>
+<body>
+  <h1>Walk all the dogs!</h1>
+  <form action="/dogs" method="POST">
+    <label for="text">Note Text:</label>
+    <input type="name" name="name" id="name" />
+    <label for="isReadyToWalk">Did you walk it?</label>
+    <input type="checkbox" name="isReadyToWalk" id="isReadyToWalk" />
+    <button type="submit">Add Note</button>
+  </form>
+  <a href="/dogs/">Back to Dogs</a>
+</body>
+</html>
